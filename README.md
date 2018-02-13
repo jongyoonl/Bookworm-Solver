@@ -3,7 +3,7 @@
 Bookworm is a flash game in which the player searches for words on a board, similarly to Boggle.
 This package provides a CLI with which one can find the longest word by supplying the board tiles.
 
-Unfortunately the wordlist used does not exactly match the one Bookworm uses. Should you change the [words](words) file, you need to rerun the [wordtree_maker.py](wordtree_maker) script.
+Unfortunately the wordlist used does not exactly match the one Bookworm uses. Should you change the [words](words) file, you need to rerun the [wordtree_maker.py](wordtree_maker.py) script.
 
 ## Getting Started
 
