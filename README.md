@@ -20,7 +20,9 @@ All files should be downloaded to a single folder. As all outputs from scripts a
 ## Running the tests
 
 All directions from here on assume that your current working directory is the `Bookworm-Solver` folder.
-Simply run `bash inttests.sh` for the integration tests. Additional tests can be added to the `tests` folder with the filename in the form of `test[0-9]+`, with the matching expected output file `answer[0-9]+`. Please look at the provided answers to see what their formats should be. A success run of the integration tests will output nothing.
+
+Simply run `bash inttests.sh` for the integration tests. Additional tests can be added to the `tests` folder with the filename in the form of `test[0-9]+`, with the matching expected output file `answer[0-9]+`. Please look at the provided answers to see what their formats should be. A successful run of the integration tests will output nothing.
+
 Unit tests can be run with the command `python3 unittests.py`.
 
 ## The CLI
