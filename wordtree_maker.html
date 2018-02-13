@@ -1,0 +1,55 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module wordtree_maker</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>wordtree_maker</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jongyoonlee/Documents/Projects/Bookworm-Solver/wordtree_maker.py">/Users/jongyoonlee/Documents/Projects/Bookworm-Solver/wordtree_maker.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;module&nbsp;is&nbsp;used&nbsp;to&nbsp;create&nbsp;the&nbsp;Tree&nbsp;from&nbsp;the&nbsp;supplied&nbsp;dict&nbsp;file.<br>
+The&nbsp;result&nbsp;is&nbsp;then&nbsp;pickled&nbsp;for&nbsp;later&nbsp;use,&nbsp;to&nbsp;be&nbsp;loaded&nbsp;by&nbsp;the&nbsp;Bookworm<br>
+Solver&nbsp;module.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="tree.html">tree</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-compareWords"><strong>compareWords</strong></a>(word0, word1)</dt><dd><tt>Compares&nbsp;two&nbsp;words&nbsp;and&nbsp;returns&nbsp;the&nbsp;substring&nbsp;that&nbsp;is&nbsp;contained&nbsp;in&nbsp;both.</tt></dd></dl>
+ <dl><dt><a name="-createTree"><strong>createTree</strong></a>(pathin, pathout)</dt><dd><tt>Calls&nbsp;its&nbsp;helper&nbsp;method&nbsp;to&nbsp;create&nbsp;the&nbsp;word&nbsp;tree.&nbsp;It&nbsp;is&nbsp;used&nbsp;to&nbsp;supply<br>
+arguments&nbsp;and&nbsp;to&nbsp;process&nbsp;the&nbsp;results.</tt></dd></dl>
+ <dl><dt><a name="-createTreeHelper"><strong>createTreeHelper</strong></a>(words, root)</dt><dd><tt>Upon&nbsp;reading&nbsp;a&nbsp;new&nbsp;word,&nbsp;this&nbsp;method&nbsp;compares&nbsp;it&nbsp;to&nbsp;the&nbsp;one&nbsp;that&nbsp;<br>
+immediately&nbsp;precedes&nbsp;it.&nbsp;If&nbsp;the&nbsp;new&nbsp;word&nbsp;is&nbsp;entirely&nbsp;contained&nbsp;within<br>
+the&nbsp;old&nbsp;word,&nbsp;a&nbsp;subbranch&nbsp;is&nbsp;created&nbsp;under&nbsp;the&nbsp;latter's&nbsp;branch.&nbsp;<br>
+Otherwise,&nbsp;the&nbsp;method&nbsp;recursively&nbsp;searches&nbsp;for&nbsp;the&nbsp;part&nbsp;of&nbsp;the&nbsp;tree<br>
+which&nbsp;does&nbsp;contain&nbsp;the&nbsp;new&nbsp;word.</tt></dd></dl>
+ <dl><dt><a name="-isWordContained"><strong>isWordContained</strong></a>(word0, word1)</dt><dd><tt>Checks&nbsp;whether&nbsp;word0&nbsp;is&nbsp;contained&nbsp;within&nbsp;word1.</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>This&nbsp;main&nbsp;method&nbsp;checks&nbsp;for&nbsp;any&nbsp;illegal&nbsp;words&nbsp;in&nbsp;the&nbsp;provided&nbsp;dict&nbsp;file,<br>
+then&nbsp;creates&nbsp;the&nbsp;tree&nbsp;encapsulating&nbsp;the&nbsp;relations&nbsp;between&nbsp;each&nbsp;word.</tt></dd></dl>
+ <dl><dt><a name="-pruneBadWords"><strong>pruneBadWords</strong></a>(path)</dt><dd><tt>Delete&nbsp;all&nbsp;the&nbsp;words&nbsp;that&nbsp;are&nbsp;not&nbsp;legal&nbsp;in&nbsp;a&nbsp;game&nbsp;of&nbsp;Bookworm.<br>
+These&nbsp;words&nbsp;are&nbsp;those&nbsp;which&nbsp;have&nbsp;q's&nbsp;unfollowed&nbsp;by&nbsp;u's,&nbsp;or&nbsp;proper&nbsp;nouns.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>dictpath</strong> = 'words'<br>
+<strong>treepath</strong> = 'tree'</td></tr></table>
+</body></html>

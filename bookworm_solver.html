@@ -1,0 +1,58 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bookworm_solver</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>bookworm_solver</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/jongyoonlee/Documents/Projects/Bookworm-Solver/bookworm_solver.py">/Users/jongyoonlee/Documents/Projects/Bookworm-Solver/bookworm_solver.py</a></font></td></tr></table>
+    <p><tt>The&nbsp;main&nbsp;methods&nbsp;for&nbsp;solving&nbsp;a&nbsp;Bookworm&nbsp;game&nbsp;board.<br>
+This&nbsp;module&nbsp;most&nbsp;importantly&nbsp;consists&nbsp;of&nbsp;implementing&nbsp;two&nbsp;functions:<br>
+<a href="#-createBoard">createBoard</a>()&nbsp;and&nbsp;<a href="#-searchBoard">searchBoard</a>().</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top><a href="tree.html">tree</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-createBoard"><strong>createBoard</strong></a>()</dt><dd><tt>Creates&nbsp;the&nbsp;board&nbsp;by&nbsp;reading&nbsp;inputs&nbsp;from&nbsp;the&nbsp;stdin.</tt></dd></dl>
+ <dl><dt><a name="-getSurroundingIndices"><strong>getSurroundingIndices</strong></a>(board, index)</dt><dd><tt>Returns&nbsp;the&nbsp;array&nbsp;of&nbsp;indices&nbsp;of&nbsp;tiles&nbsp;that&nbsp;surround&nbsp;the&nbsp;given&nbsp;index.</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>For&nbsp;every&nbsp;iteration,&nbsp;calls&nbsp;<a href="#-createBoard">createBoard</a>()&nbsp;to&nbsp;generate&nbsp;the&nbsp;board&nbsp;array,<br>
+then&nbsp;calls&nbsp;<a href="#-searchBoard">searchBoard</a>().&nbsp;If&nbsp;a&nbsp;possible&nbsp;word&nbsp;is&nbsp;found,&nbsp;prints&nbsp;the<br>
+longest&nbsp;string,&nbsp;its&nbsp;length,&nbsp;and&nbsp;the&nbsp;tiles&nbsp;that&nbsp;have&nbsp;been&nbsp;used.</tt></dd></dl>
+ <dl><dt><a name="-reduce"><strong>reduce</strong></a>(...)</dt><dd><tt><a href="#-reduce">reduce</a>(function,&nbsp;sequence[,&nbsp;initial])&nbsp;-&gt;&nbsp;value<br>
+&nbsp;<br>
+Apply&nbsp;a&nbsp;function&nbsp;of&nbsp;two&nbsp;arguments&nbsp;cumulatively&nbsp;to&nbsp;the&nbsp;items&nbsp;of&nbsp;a&nbsp;sequence,<br>
+from&nbsp;left&nbsp;to&nbsp;right,&nbsp;so&nbsp;as&nbsp;to&nbsp;reduce&nbsp;the&nbsp;sequence&nbsp;to&nbsp;a&nbsp;single&nbsp;value.<br>
+For&nbsp;example,&nbsp;<a href="#-reduce">reduce</a>(lambda&nbsp;x,&nbsp;y:&nbsp;x+y,&nbsp;[1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5])&nbsp;calculates<br>
+((((1+2)+3)+4)+5).&nbsp;&nbsp;If&nbsp;initial&nbsp;is&nbsp;present,&nbsp;it&nbsp;is&nbsp;placed&nbsp;before&nbsp;the&nbsp;items<br>
+of&nbsp;the&nbsp;sequence&nbsp;in&nbsp;the&nbsp;calculation,&nbsp;and&nbsp;serves&nbsp;as&nbsp;a&nbsp;default&nbsp;when&nbsp;the<br>
+sequence&nbsp;is&nbsp;empty.</tt></dd></dl>
+ <dl><dt><a name="-reducer"><strong>reducer</strong></a>(tuple0, tuple1)</dt><dd><tt>Function&nbsp;for&nbsp;reducing.&nbsp;Chooses&nbsp;the&nbsp;tuple&nbsp;whose&nbsp;associated&nbsp;string&nbsp;is&nbsp;longer.</tt></dd></dl>
+ <dl><dt><a name="-searchBoard"><strong>searchBoard</strong></a>(board, wordtree)</dt><dd><tt>Searches&nbsp;the&nbsp;board&nbsp;for&nbsp;possible&nbsp;words&nbsp;by&nbsp;calling&nbsp;its&nbsp;helper&nbsp;function.</tt></dd></dl>
+ <dl><dt><a name="-searchBoardHelper"><strong>searchBoardHelper</strong></a>(board, prevtree, usedtiles, currindex, maxlen, maxstr)</dt><dd><tt>Recursively&nbsp;searches&nbsp;the&nbsp;board.&nbsp;Looks&nbsp;at&nbsp;the&nbsp;immediately&nbsp;surrounding&nbsp;tiles<br>
+afterwords&nbsp;to&nbsp;see&nbsp;if&nbsp;an&nbsp;even&nbsp;longer&nbsp;word&nbsp;is&nbsp;possible.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>stdin</strong> = &lt;open file '&lt;stdin&gt;', mode 'r'&gt;<br>
+<strong>treepath</strong> = 'tree'</td></tr></table>
+</body></html>
