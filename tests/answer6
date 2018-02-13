@@ -1,0 +1,9 @@
+Please type the letters of the board column by column separated by spaces:
+Error:Input is not a letter.
+
+Please type the letters of the board column by column separated by spaces:
+3
+fed
+[0, 0, 0]
+[1, 1]
+Please type the letters of the board column by column separated by spaces:
